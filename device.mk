@@ -2,6 +2,12 @@
 # Inherit from sm6225-common
 $(call inherit-product, device/motorola/sm6225-common/bengal.mk)
 
+# QC common
+$(call inherit-product, device/qcom/common/common.mk)
+BENGAL := bengal
+TARGET_BOARD_PLATFORM := $(BENGAL)
+DEVICE := devon
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 

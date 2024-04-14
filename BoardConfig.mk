@@ -3,6 +3,12 @@
 include device/motorola/sm6225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/devon
+COMMON_PATH := device/qcom/common
+
+# QC tree common
+include $(COMMON_PATH)/BoardConfigQcom.mk
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+TARGET_SEPOLICY_DIR := bengal
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := devon
